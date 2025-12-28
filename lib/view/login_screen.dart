@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nectar_grocery/view/main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -102,7 +103,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 30),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+                      return MainScreen();
+                    }));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromRGBO(83, 177, 117, 1),
                     padding: const EdgeInsets.symmetric(vertical: 16),
